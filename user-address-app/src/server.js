@@ -33,7 +33,7 @@ app.post('/register', async (req, res) => {
 
 sequelize.sync().then(() => {
     app.listen(PORT, () => {
-        console.log(`Server is running on http://127.0.0.1:${PORT}`);
+        console.log(`Server is running on http://localhost:${PORT}`);
     });
 }).catch(err => {
     console.error('Unable to connect to the database:', err);
