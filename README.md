@@ -21,7 +21,7 @@ Testing the API
 - Node.js
 - Express.js
 - Sequelize ORM
-- MySQL
+- SQLite3
 
 # Installation
 Follow these steps to set up the project on your local machine:
