@@ -1,13 +1,12 @@
 # User-Address App
 
-This is a simple Node.js application that allows users to register with their names and addresses. The application uses Express.js for the server and Sequelize as the ORM to interact with a MySQL database.
+This is a simple Node.js application that allows users to register with their names and addresses. The application uses Express.js for the server and Sequelize as the ORM to interact with a SQLite3 database.
 
 # Table of Contents
 
 Features
 Technologies Used
 Installation
-Database Setup
 API Endpoints
 Testing the API
 
@@ -42,24 +41,8 @@ Run the following command to install the required npm packages:
 
 - Create a .env file in the root directory of the project and add the following:
 
-DB_NAME=user_address_db
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_HOST=localhost
+PORT=3000
 
-- Replace yourpassword with your actual MySQL root password.
-
-# Database Setup
-
-1. **Create the database**
-
-- Open your MySQL client and execute the following command to create the database:
-
-CREATE DATABASE user_address_db;
-
-2. **Ensure that the necessary tables are created***
-
-- The application uses Sequelize to define and create the required tables (User and Address). When you run the application for the first time, the tables will be created automatically.
 
 # API Endpoints
 
@@ -100,11 +83,17 @@ In the request body, send the JSON data:
 }
 
 
-3. **Check the database**
+# check api 
 
-- After sending the request, check your MySQL database to ensure that the user and address have been added.
+- POST /register: Registers a new user and their address.
+- POST http://localhost:3000/register
 
+- GET /users: Retrieves all users without their addresses.
+- GET http://localhost:3000/users
+
+- GET /addresses: Retrieves all addresses with their associated user details.
+- GET http://localhost:3000/addresses
 
 # Deploy Link
 
-URL link :- 
+URL link :- https://user-address-app-737e.onrender.com
